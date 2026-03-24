@@ -99,6 +99,22 @@
         .heart {
             color: #ff4d88;
         }
+        .gallery-box {
+    height: 250px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.gallery-box img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* THIS FIXES ZOOM */
+}
     </style>
 </head>
 
@@ -178,11 +194,33 @@
 <!-- GALLERY -->
 <div id="gallery" class="container pb-5">
     <h3 class="text-center mb-4" style="color:#ff4d88;">Gallery 📸</h3>
-    <div class="row g-3">
-        <div class="col-md-3"><img src="kamiduwa.jpg"></div>
-        <div class="col-md-3"><img src="pink.jpg"></div>
-        <div class="col-md-3"><img src="cocumber.jpg"></div>
-        <div class="col-md-3"><img src="https://via.placeholder.com/300" class="img-fluid rounded shadow"></div>
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="gallery-box">
+                <img src="kamiduwa.jpg/300" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="gallery-box">
+                <img src="pink.jpg/300" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="gallery-box">
+                <img src="cocumber.jpg/300" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="gallery-box">
+                <img src="https://via.placeho/300" class="img-fluid">
+            </div>
+        </div>
+
     </div>
 </div>
 
