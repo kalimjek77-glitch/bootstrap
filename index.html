@@ -25,7 +25,6 @@
         .navbar {
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.3);
         }
 
         .nav-link {
@@ -36,7 +35,6 @@
 
         .nav-link:hover {
             color: #ff4d88 !important;
-            transform: translateY(-2px);
         }
 
         .navbar-brand {
@@ -50,11 +48,11 @@
         }
 
         .hero h1 {
-            font-weight: 700;
             color: #ff4d88;
+            font-weight: 700;
         }
 
-        /* ALBUM CARDS */
+        /* CARDS */
         .album-card {
             border: none;
             border-radius: 20px;
@@ -65,11 +63,12 @@
 
         .album-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
 
-        .album-card img {
+        /* VIDEO STYLE */
+        .album-card video {
             height: 250px;
+            width: 100%;
             object-fit: cover;
         }
 
@@ -82,7 +81,7 @@
             color: #ff4d88;
         }
 
-        /* LOVE LETTER */
+        /* LETTER */
         .letter-box {
             background: white;
             border-radius: 20px;
@@ -106,30 +105,22 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#">
             <i class="bi bi-heart-fill"></i> Our Album
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLove">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarLove">
+        <div class="collapse navbar-collapse" id="nav">
             <ul class="navbar-nav ms-auto text-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#"><i class="bi bi-house-heart"></i> Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#memories"><i class="bi bi-images"></i> Memories</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallery"><i class="bi bi-camera-heart"></i> Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#letter"><i class="bi bi-envelope-heart"></i> Love Letter</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#memories">Memories</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#letter">Love Letter</a></li>
             </ul>
         </div>
     </div>
@@ -141,13 +132,15 @@
     <p>Every moment with you is my favorite memory.</p>
 </div>
 
-<!-- MEMORIES -->
+<!-- MEMORIES (VIDEOS) -->
 <div id="memories" class="container pb-5">
     <div class="row g-4">
 
         <div class="col-md-4">
             <div class="card album-card">
-                <img src="https://via.placeholder.com/400x300">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
                 <div class="caption">
                     <h5>Our First Date</h5>
                     <p>Best day ever 💖</p>
@@ -157,7 +150,9 @@
 
         <div class="col-md-4">
             <div class="card album-card">
-                <img src="https://via.placeholder.com/400x300">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                </video>
                 <div class="caption">
                     <h5>Random Moments</h5>
                     <p>You make everything fun ✨</p>
@@ -167,7 +162,9 @@
 
         <div class="col-md-4">
             <div class="card album-card">
-                <img src="https://via.placeholder.com/400x300">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/video3.mp4" type="video/mp4">
+                </video>
                 <div class="caption">
                     <h5>Your Smile</h5>
                     <p>My favorite 💕</p>
@@ -192,14 +189,13 @@
 <!-- LOVE LETTER -->
 <div id="letter" class="container pb-5">
     <div class="letter-box text-center">
-        <h3 class="mb-3" style="color:#ff4d88;">💌 My Love Letter</h3>
+        <h3 style="color:#ff4d88;">💌 My Love Letter</h3>
         <p>
-            Hi love, <br><br>
-            I just want you to know how much you mean to me.  
-            Every moment we spend together becomes a memory I treasure forever.  
-            Thank you for being my happiness, my peace, and my everything. 💕  
+            Hi love 💕 <br><br>
+            Every moment with you feels like a dream I never want to wake up from.  
+            Thank you for making my life brighter and happier every single day.  
             <br><br>
-            I love you always.
+            I love you always ❤️
         </p>
     </div>
 </div>
@@ -209,7 +205,6 @@
     Made with <i class="bi bi-heart-fill heart"></i> just for you
 </div>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
