@@ -126,11 +126,16 @@
 </head>
 
 <body>
-
-<!-- 🎵 BACKGROUND MUSIC -->
-<audio autoplay loop>
+<audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+document.addEventListener("click", function () {
+    let music = document.getElementById("bgMusic");
+    music.play();
+}, { once: true });
+</script>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
