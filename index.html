@@ -126,15 +126,16 @@
 </head>
 
 <body>
-<audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
+<div style="position:fixed; bottom:20px; right:20px;">
+    <button onclick="playMusic()" class="btn btn-light">
+        Play Music
+    </button>
+</div>
 
 <script>
-document.addEventListener("click", function () {
-    let music = document.getElementById("bgMusic");
-    music.play();
-}, { once: true });
+function playMusic(){
+    document.getElementById("bgMusic").play();
+}
 </script>
 
 <!-- NAVBAR -->
