@@ -126,6 +126,18 @@
 </head>
 
 <body>
+
+    <audio id="bgMusic" loop>
+       <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+<script>
+document.addEventListener("click", function () {
+    let music = document.getElementById("bgMusic");
+    music.play();
+}, { once: true });
+</script>
+    
 <div style="position:fixed; bottom:20px; right:20px;">
     <button onclick="playMusic()" class="btn btn-light">
         Play Music
